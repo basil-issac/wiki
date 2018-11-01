@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WikiListComponent } from './wiki-search/wiki-list/wiki-list.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'wiki';
+  title = 'Wiki-Giphy';
+  constructor() {}
 }

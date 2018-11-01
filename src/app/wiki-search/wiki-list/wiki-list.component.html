@@ -1,0 +1,23 @@
+
+<label for="userInput">Search text: </label>
+<input type="text" class="form-control" id="userInput" name="userInput" required [(ngModel)]="userInput">
+<button (click)="search()"> Search </button>
+
+<style>
+  table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+  }
+  th, td {
+      padding: 5px;
+      text-align: left;    
+  }
+</style>
+
+<h1>Wiki Results: </h1>
+
+<table style="width:100%">
+  <tr *ngFor="let result of results">
+    <td>{{result.title}}</td>
+  </tr>
+</table>
