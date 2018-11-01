@@ -17,7 +17,17 @@
 <h1>Wiki Results: </h1>
 
 <table style="width:100%">
-  <tr *ngFor="let result of results">
-    <td>{{result.title}}</td>
+  <tr *ngFor="let wikiResult of wikiResults">
+    <td>{{wikiResult.title}}</td>
   </tr>
 </table>
+
+<h1>Giphy Results: </h1>
+
+<table style="width:100%">
+  <tr *ngFor="let giphyResult of giphyResults">
+    <td><img src={{giphyResult.images.original.url}}></td>
+  </tr>
+</table>
+
+

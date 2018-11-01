@@ -10,7 +10,8 @@ import { WikiService } from '../wiki.service';
 export class WikiListComponent implements OnInit {
 
   userInput: string;
-  results: any[]
+  wikiResults: any[];
+  giphyResults: any[];
 
   constructor(private http: HttpClient, private wikiService: WikiService, private renderer: Renderer2) { 
     this.userInput = '';
@@ -20,9 +21,15 @@ export class WikiListComponent implements OnInit {
   }
 
   search() {
-    this.wikiService.search(this.userInput).subscribe(
+    this.wikiService.searchWiki(this.userInput).subscribe(
       (wikiResults: any[]) => {
-        this.results = wikiResults['query']['search'];
+        this.wikiResults = wikiResults['query']['search'];
+      }
+    );
+
+    this.wikiService.searchGiphy(this.userInput).subscribe(
+      (giphyResults: any[]) => {
+        this.giphyResults = giphyResults['data'];
       }
     );
   }
