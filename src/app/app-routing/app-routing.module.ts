@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from '../app.component';
-import { HistoryComponent } from '../history/history.component';
+import { HistoryComponent } from '../wiki-search/history/history.component';
 import { WikiListComponent } from '../wiki-search/wiki-list/wiki-list.component';
 
 const routes: Routes = [

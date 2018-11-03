@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { WikiService } from '../wiki-search/wiki.service';
+import { WikiService } from '../wiki.service';
 
 @Component({
   selector: 'app-history',
@@ -11,9 +11,7 @@ export class HistoryComponent implements OnInit {
   searches: string[];
 
   constructor(private wikiService: WikiService) {
-    this.searches = [
-      'need to do'
-    ];
+    this.searches = wikiService.searches;
   }
 
   ngOnInit() {

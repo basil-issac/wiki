@@ -5,6 +5,7 @@ import { WikiListComponent } from './wiki-list/wiki-list.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from "@angular/forms";
+import { HistoryComponent } from './history/history.component';
 
 
 @NgModule({
@@ -15,7 +16,7 @@ import {FormsModule} from "@angular/forms";
     FormsModule
   ],
   providers: [WikiService],
-  declarations: [WikiListComponent],
-  exports: [WikiListComponent]
+  declarations: [WikiListComponent, HistoryComponent],
+  exports: [WikiListComponent, HistoryComponent]
 })
 export class WikiSearchModule { }
